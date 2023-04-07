@@ -50,6 +50,6 @@ ssh -T git@gitlab.com
 
 ## 其他
 
-git init / git clone 时，默认使用 git 全局配置，推送代码时会出现头像异常，可以在项目内容手动设置用户名/密码
+git init / git clone 时，默认使用 git 全局配置，推送代码时会出现头像/名称异常，可以在项目内容手动设置用户名/密码
 
 git config user.name "" && git config user.email ""
