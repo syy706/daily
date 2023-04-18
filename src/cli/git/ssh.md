@@ -48,6 +48,22 @@ ssh -T git@github.com
 
 ssh -T git@gitlab.com
 
+有时候 ssh 会报错
+
+遇到如下异常：
+
+connect to host git.midea.com port 22: Connection timed out
+
+fatal: Could not read from remote repository.
+
+原因是代理软件将 22 端口占用，改为 443
+
+config 文件修改配置为:
+Host github.com
+HostName ssh.github.com
+Port 443
+User username
+
 ## 其他
 
 git init / git clone 时，默认使用 git 全局配置，推送代码时会出现头像/名称异常，可以在项目内容手动设置用户名/密码
